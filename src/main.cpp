@@ -11,7 +11,12 @@ using namespace std;
 void printUsage(){
     cout<<"Usage: \n";
     cout<<"fequip -command -type <input_file> \n";
-}
+    cout<<"Commands: encrypt | compress \n";
+    cout<<"Types: \n";
+    cout<<"-compress: huffman | lzw \n";
+    cout<<"-encrypt: sha256 | aes \n";
+    cout<<"Please run using above commands \n";
+    }
 
 int main(int argc, char* argv[]) {
     if (argc < 4) {
@@ -33,8 +38,10 @@ int main(int argc, char* argv[]) {
         string outputFile = inputFile + ".huff";
         string mapFile = inputFile + ".map";
 
+        string type = argv[2];
+
         // Call compression function
-        bool success = compressFile(inputFile, outputFile, mapFile);
+        bool success = compressFile(inputFile, outputFile, mapFile, type);
         if (success) {
             cout << "File compressed successfully.\n";
         } else {
@@ -53,8 +60,10 @@ int main(int argc, char* argv[]) {
         string outputFile = inputFile + ".enc";
         string keyFile = inputFile + ".key";
 
+        string type = argv[2];
+
         // Call encryption function
-        bool success = encryptFile(inputFile, outputFile, keyFile);
+        bool success = encryptFile(inputFile, outputFile, keyFile, type);
         if (success) {
             cout << "File encrypted successfully.\n";
         } else {
