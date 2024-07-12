@@ -71,6 +71,7 @@ This project is licensed under the MIT License - see the [LICENSE](https://githu
 ## Credits
 
 - Developed by [SidZRed](https://github.com/SidZRed)
+
 New updates on this tool are to be released. Any new algorithms/ methods for the above are most welcome!
 
 ---
