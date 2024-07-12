@@ -1,0 +1,12 @@
+Source: fequip
+Section: utils
+Priority: optional
+Maintainer: Siddharth Reddy <siddharthrr@iisc.ac.in>
+Build-Depends: debhelper (>= 11)
+Standards-Version: 4.5.1
+Homepage: https://github.io/SidZRed/fequip
+Vcs-Git: https://github.com/SidZRed/fequip.git
+Package: fequip
+Architecture: amd64
+Depends: ${shlibs:Depends}, ${misc:Depends}, libc6 (>= 2.31), libstdc++6 (>= 9)
+Description: fequip is a file equip tool for easy storage and transfer.s
