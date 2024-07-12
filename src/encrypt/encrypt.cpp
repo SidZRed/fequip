@@ -24,7 +24,34 @@ string generateKey(int length) {
 int encryptFile(string inputFile, string outputFile, string keyFile, string type){
     if (type == "cipher"){
         cout<<"Encrypting using cipher \n";
+        string key = generateKey(32);    if(type == "aes"){
+        cout<<"Encrypting using AES \n";
         string key = generateKey(32);
+        fstream keyFileStream(keyFile);
+        if(keyFileStream.is_open()){
+            keyFileStream<<key;
+            keyFileStream.close();
+        }
+        else{
+            cout<<"Error while creating key file\n";
+            return 0;
+        }
+        
+        ifstream inputFileStream(inputFile);
+        string content;
+        if(inputFileStream.is_open()){
+            stringstream buffer;
+            buffer << inputFileStream.rdbuf();
+            content = buffer.str();
+            inputFileStream.close();
+        }
+        else{
+            cout<<"Error while reading input file\n";
+            return 0;
+        }
+        
+        
+    }
         fstream keyFileStream(keyFile);
         if(keyFileStream.is_open()){
             keyFileStream<<key;
@@ -65,33 +92,6 @@ int encryptFile(string inputFile, string outputFile, string keyFile, string type
             return 0;
         }
     }
-    if(type == "aes"){
-        cout<<"Encrypting using AES \n";
-        string key = generateKey(32);
-        fstream keyFileStream(keyFile);
-        if(keyFileStream.is_open()){
-            keyFileStream<<key;
-            keyFileStream.close();
-        }
-        else{
-            cout<<"Error while creating key file\n";
-            return 0;
-        }
-        
-        ifstream inputFileStream(inputFile);
-        string content;
-        if(inputFileStream.is_open()){
-            stringstream buffer;
-            buffer << inputFileStream.rdbuf();
-            content = buffer.str();
-            inputFileStream.close();
-        }
-        else{
-            cout<<"Error while reading input file\n";
-            return 0;
-        }
-        
-        
-    }
+
     return 1;
 }
