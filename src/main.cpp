@@ -14,7 +14,7 @@ void printUsage(){
     cout<<"Commands: encrypt/decrypt | compress \n";
     cout<<"Types: \n";
     cout<<"-compress: huffman | lzw \n";
-    cout<<"-encrypt: cipher | aes \n";
+    cout<<"-encrypt: cipher \n";
     cout<<"Please run using above commands \n";
     }
 
