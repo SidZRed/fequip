@@ -5,6 +5,8 @@
 #include <vector>
 #include "compression/compress.h"
 #include "encrypt/encrypt.h"
+#include "decrypt/decrypt.h"
+
 
 using namespace std;
 
