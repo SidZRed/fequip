@@ -73,7 +73,7 @@ int main(int argc, char* argv[]) {
         }
     }
 
-    if (command == '-decrypt'){
+    if (command == "-decrypt"){
         if (argc != 4) {
             cout << "Invalid number of arguments for decrypt command.\n";
             printUsage();
