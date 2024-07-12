@@ -20,7 +20,23 @@ void printUsage(){
     cout<<"Please run using above commands \n";
     }
 
+void printHelp(){
+    cout<<"Help: \n";
+    cout<<"This is a file encryption and compression tool. \n";
+    cout<<"Commands: encrypt/decrypt | compress \n";
+    cout<<"Types: \n";
+    cout<<"-compress: huffman | lzw \n";
+    cout<<"-encrypt: cipher \n";
+    cout<<"Please run using above commands \n";
+}
+
 int main(int argc, char* argv[]) {
+    if(argc == 2){
+        if (argv[2] == "-help"){
+            printHelp();
+            return 0;
+        }
+    }
     if (argc < 4) {
         printUsage();
         return 1;
@@ -37,7 +53,7 @@ int main(int argc, char* argv[]) {
         }
 
         string inputFile = argv[3];
-        string outputFile = inputFile + ".huff";
+        string outputFile = inputFile + ".cmp";
         string mapFile = inputFile + ".map";
 
         string type = argv[2];
