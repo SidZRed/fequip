@@ -11,7 +11,7 @@ using namespace std;
 void printUsage(){
     cout<<"Usage: \n";
     cout<<"fequip -command -type <input_file> \n";
-    cout<<"Commands: encrypt | compress \n";
+    cout<<"Commands: encrypt/decrypt | compress \n";
     cout<<"Types: \n";
     cout<<"-compress: huffman | lzw \n";
     cout<<"-encrypt: cipher | aes \n";
@@ -70,6 +70,32 @@ int main(int argc, char* argv[]) {
             cout << "Encryption failed.\n";
         }
     }
+
+    if (command == '-decrypt'){
+        if (argc != 4) {
+            cout << "Invalid number of arguments for decrypt command.\n";
+            printUsage();
+            return 1;
+        }
+
+        string inputFile = argv[3];
+        string keyFile = argv[4];
+        string outputFile = inputFile + ".dec";
+
+        string type = argv[2];
+
+        // Call decryption function
+        bool success = decryptFile(inputFile, outputFile, keyFile, type);
+        if (success) {
+            cout << "File decrypted successfully.\n";
+        } else {
+            cout << "Decryption failed.\n";
+        }
+    }
+
+   
+
+
     // Invalid command
     else {
         cout << "Invalid command.\n";
