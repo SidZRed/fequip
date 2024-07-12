@@ -13,6 +13,9 @@ SOURCES := $(wildcard $(SRCDIR)/*.cpp) \
 OBJECTS := $(patsubst $(SRCDIR)/%.cpp, $(BINDIR)/%.o, $(SOURCES))
 EXECUTABLE := $(BINDIR)/fequip
 
+# Create necessary directories before compiling
+$(shell mkdir -p $(dir $(OBJECTS)))
+
 # Make rules
 all: $(EXECUTABLE)
 
@@ -23,4 +26,4 @@ $(BINDIR)/%.o: $(SRCDIR)/%.cpp
 	$(CC) $(CFLAGS) -I$(INCDIR) -c $< -o $@
 
 clean:
-	rm -f $(OBJECTS) $(EXECUTABLE)
+	rm -rf $(BINDIR)/*.o $(EXECUTABLE)
