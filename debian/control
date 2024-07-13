@@ -1,0 +1,12 @@
+Source: fequip
+Section: utils
+Priority: medium
+Maintainer: Siddharth Reddy <siddharthrr@iisc.ac.in>
+Build-Depends: debhelper-compat (=12), cmake, g++
+Standards-Version: 4.5.0
+Homepage: https://github.com/SidZRed/fequip
+
+Package: fequip
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: A command line tool for file compression and encryption/decryption.

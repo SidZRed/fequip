@@ -1,0 +1,9 @@
+Package: fequip
+Version: 1.0-1
+Architecture: amd64
+Maintainer: Siddharth Reddy <siddharthrr@iisc.ac.in>
+Installed-Size: 7
+Section: utils
+Priority: medium
+Homepage: https://github.com/SidZRed/fequip
+Description: A command line tool for file compression and encryption/decryption.
