@@ -14,12 +14,6 @@ sudo apt install fequip
 This has been implemented by maintaining a personal repository which requires an up and running server. So if in any case, there is any difficulty in operating the server, please drop an issue
 in the same repository and it should be fixed soon. This is because the remote repository is being hosted on apache-2 server.
 
-### macOS (using Homebrew)
-
-```bash
-brew update
-brew install fequip
-```
 
 ## Usage
 General usage:
