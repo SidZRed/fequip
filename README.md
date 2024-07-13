@@ -1,6 +1,6 @@
 # fequip - File Equip tool
 
-`fequip` is a command line tool designed for equipping files to enhance their storage and transfer capabilities. It includes methods for file compression using Huffman encoding and LZW, as well as file encryption and decryption. Files processed with `fequip` are stored with unique extensions for easy identification.
+`fequip` is a command line tool designed for equipping files to enhance their storage and transfer capabilities. It includes methods for file compression using Huffman encoding and LZW, as well as file encryption and decryption. Files processed with `fequip` are stored with unique extensions for easy identification. The command line tool is implemented in C++ for better performance and security.
 
 ## Installation
 
