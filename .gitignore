@@ -64,8 +64,6 @@ Thumbs.db
 # Ignore log files
 *.log
 
-# Ignore generated documentation
-docs/
 
 # Ignore clangd index
 .clangd/
