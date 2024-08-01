@@ -14,7 +14,7 @@ sudo apt install fequip
 This has been implemented by maintaining a personal repository which requires an up and running server. So if in any case, there is any difficulty in operating the server, please drop an issue
 in the same repository and it should be fixed soon. This is because the remote repository is being hosted on apache-2 server.
 
-This can also be resolved by locally downloading the `.deb` file. This is available in `local_setup` directory.  
+This can also be resolved by locally downloading the `.deb` file and building the projects locally. This is available in `local_setup` directory.  
 
 ## Usage
 General usage:
